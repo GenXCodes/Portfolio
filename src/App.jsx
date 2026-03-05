@@ -4,12 +4,12 @@ const NAV_LINKS = ["About", "Experience", "Projects", "Skills", "Testimonials", 
 
 const PROJECTS = [
   {
-    title: "CloudSync Dashboard",
-    desc: "Real-time analytics platform with WebSocket integration, D3.js charts, and role-based access control.",
-    tags: ["React", "Node.js", "WebSocket", "D3.js"],
+    title: "IT Asset Management System",
+    desc: "A custom-built MVC web application for AECOM's IT asset management needs, featuring comprehensive asset lifecycle tracking, audit logging, and PDF accountability forms.",
+    tags: ["Pure PHP 8.2 Version", "AI Powered Assistance", "Ubuntu 24.04 LTS", "AWS Lightsail", "PHP (PDO / MySQL driver)", "MySQL / MariaDB (InnoDB, utf8mb4)", "CI/CD)", "Tailwind CSS CDN + Alpine.js CDN", "dompdf/dompdf (via Composer)", "phpoffice/phpspreadsheet (import/export)", "M Sans + IBM Plex Mono (Google Fonts CDN)", "Apache/Nginx 2.4 with mod_rewrite"],
     color: "#00f5d4",
     icon: "◈",
-    link: "#",
+    link: "http://54.255.213.246/",
   },
   {
     title: "E-Commerce API",
@@ -42,33 +42,38 @@ const SKILLS = [
   { name: "TypeScript", level: 90, cat: "Frontend" },
   { name: "CSS / Tailwind", level: 88, cat: "Frontend" },
   { name: "Node.js / Express", level: 85, cat: "Backend" },
-  { name: "PostgreSQL", level: 80, cat: "Backend" },
-  { name: "Docker / K8s", level: 75, cat: "DevOps" },
-  { name: "AWS / GCP", level: 72, cat: "DevOps" },
-  { name: "GraphQL", level: 78, cat: "Backend" },
+  { name: "PHP", level: 85, cat: "Backend" },
+  { name: "MySQL", level: 80, cat: "Backend" },
+  { name: "AWS", level: 72, cat: "DevOps" },
 ];
 
 const EXPERIENCES = [
   {
-    role: "Senior Frontend Engineer",
-    company: "Pixel Labs",
-    period: "2022 – Present",
-    desc: "Led migration of legacy jQuery app to React 18, reducing bundle size by 42%. Mentored 3 junior devs.",
-    color: "#00f5d4",
-  },
-  {
-    role: "Full Stack Developer",
-    company: "ByteForge Inc.",
-    period: "2020 – 2022",
-    desc: "Built microservices architecture serving 500k+ users. Improved API response time by 60%.",
+    role: "Desktop Support Engineer",
+    company: "Millennium Technology Services Inc.",
+    period: "2023 – 2025",
+    desc: "Focus on providing timely and effective technical support to end-users. Local and remote troubleshooting, hardware and software maintenance, and user training.",
     color: "#f72585",
+    certificate: "https://drive.google.com/file/d/1Ryx9I3NIHrHBkdCsw3zpAaI9j5Lhmxv6/view?usp=sharing",
+    certificateAlt: "Certificate of Employment at Millennium Technology Services Inc.",
   },
   {
-    role: "Boot Camp Graduate",
-    company: "Village 88",
-    period: "2022 – ",
-    desc: "Developed client-facing dashboards and integrated third-party APIs for fintech startup.",
+    role: "Desktop Support Specialist",
+    company: "Millennium Technology Services Inc.",
+    period: "2020 – 2022",
+    desc: "Focus on providing timely and effective technical support to end-users. Local and remote troubleshooting, hardware and software maintenance, and user training.",
+    color: "#f72585",
+    certificate: "https://drive.google.com/file/d/1Ijbx-gAeQHQmyKoFznC4M1Kt4Fy3cs68/view?usp=sharing",
+    certificateAlt: "Certificate of Employment at Millennium Technology Services Inc.",
+  },
+  {
+    role: "Village88Boot Camp Graduate",
+    company: "Village88",
+    period: "2023 Jan 9 – 2023 Apr 28",
+    desc: "Robust full stack bootcamp covering HTML5, CSS, LESS, Responsive Web Design, JQuery, Database Design, SQL Queries, MySQL, PHP, OOP, CI/CD, JavaScript, React, Node.js, Express, PostgreSQL, CodeIgniter, Laravel, Building Resume  and DevOps fundamentals.",
     color: "#4cc9f0",
+    certificate: "https://drive.google.com/file/d/16OmLPnme-Wmgqy13MTe3NI0XC1WLUB1U/preview",
+    certificateAlt: "Full Stack Bootcamp Certificate",
   },
 ];
 
@@ -197,7 +202,7 @@ function Navbar({ active, onNav }) {
   };
 
   const logoStyle = {
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     fontSize: isMobile ? 16 : 20,
     fontWeight: 700,
     color: "#00f5d4",
@@ -212,7 +217,7 @@ function Navbar({ active, onNav }) {
     padding: isMobile ? "6px 10px" : "6px 16px",
     cursor: "pointer",
     fontSize: isMobile ? 11 : 13,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     letterSpacing: 1,
     transition: "all 0.2s ease",
     whiteSpace: "nowrap",
@@ -240,7 +245,7 @@ function Navbar({ active, onNav }) {
     <>
       <nav style={navStyle}>
         <span style={logoStyle}>
-          &lt;dev/&gt;
+          Degollacion
         </span>
 
         {isMobile ? (
@@ -361,7 +366,7 @@ function HeroSection() {
       window.removeEventListener("resize", checkMobile);
       clearInterval(cursorInterval);
     };
-  }, []);
+  }, [phrases]);
 
   const sectionStyle = {
     minHeight: "100vh",
@@ -385,14 +390,14 @@ function HeroSection() {
     marginBottom: isMobile ? 24 : 32,
     fontSize: isMobile ? 10 : 12,
     color: "#00f5d4",
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     letterSpacing: 2,
     animation: "fadeUp 0.8s ease both",
   };
 
   const nameStyle = {
     display: "block",
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: isMobile ? "clamp(32px, 10vw, 88px)" : "clamp(42px, 8vw, 88px)",
     fontWeight: 800,
     color: "#fff",
@@ -401,7 +406,7 @@ function HeroSection() {
 
   const titleStyle = {
     display: "block",
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     fontSize: isMobile ? "clamp(18px, 5vw, 40px)" : "clamp(20px, 4vw, 40px)",
     fontWeight: 400,
     background: "linear-gradient(90deg, #00f5d4, #4cc9f0, #f72585)",
@@ -419,7 +424,7 @@ function HeroSection() {
     color: "rgba(255,255,255,0.5)",
     fontSize: isMobile ? 15 : 17,
     lineHeight: 1.75,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
     animation: "fadeUp 0.8s ease 0.2s both",
   };
 
@@ -441,7 +446,7 @@ function HeroSection() {
     fontWeight: 700,
     fontSize: isMobile ? 14 : 15,
     cursor: "pointer",
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     letterSpacing: 1,
     transition: "all 0.2s ease",
     boxShadow: "0 0 30px rgba(0,245,212,0.3)",
@@ -456,7 +461,7 @@ function HeroSection() {
     fontWeight: 500,
     fontSize: isMobile ? 14 : 15,
     cursor: "pointer",
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
     transition: "all 0.2s ease",
   };
 
@@ -526,7 +531,7 @@ function HeroSection() {
         <span style={{
           color: "rgba(255,255,255,0.25)",
           fontSize: isMobile ? 10 : 11,
-          fontFamily: "'Space Mono', monospace",
+          fontFamily: "'JetBrains Mono', monospace",
           letterSpacing: 2
         }}>SCROLL</span>
         <div style={{
@@ -542,6 +547,7 @@ function HeroSection() {
 
 function ExperienceSection() {
   const [isMobile, setIsMobile] = useState(false);
+  const [viewingCertificate, setViewingCertificate] = useState(null);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -549,6 +555,14 @@ function ExperienceSection() {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+  const handleViewCertificate = (certificateUrl, certificateAlt) => {
+    setViewingCertificate({ url: certificateUrl, alt: certificateAlt });
+  };
+
+  const handleCloseCertificate = () => {
+    setViewingCertificate(null);
+  };
 
   const sectionStyle = {
     padding: isMobile ? "60px 20px" : "80px 40px",
@@ -593,7 +607,7 @@ function ExperienceSection() {
   };
 
   const roleStyle = {
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: isMobile ? 18 : 20,
     fontWeight: 700,
     color: "#fff"
@@ -602,7 +616,7 @@ function ExperienceSection() {
   const companyStyle = (color) => ({
     color: color,
     fontSize: isMobile ? 13 : 14,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     marginTop: 2
   });
 
@@ -612,7 +626,7 @@ function ExperienceSection() {
     padding: isMobile ? "3px 10px" : "4px 12px",
     color: "rgba(255,255,255,0.4)",
     fontSize: isMobile ? 11 : 12,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     whiteSpace: "nowrap",
   };
 
@@ -621,8 +635,24 @@ function ExperienceSection() {
     color: "rgba(255,255,255,0.55)",
     fontSize: isMobile ? 14 : 15,
     lineHeight: 1.65,
-    fontFamily: "'DM Sans', sans-serif"
+    fontFamily: "'Poppins', sans-serif"
   };
+
+  const certificateButtonStyle = (color) => ({
+    background: `${color}15`,
+    border: `1px solid ${color}40`,
+    borderRadius: 8,
+    padding: isMobile ? "6px 12px" : "8px 16px",
+    color: color,
+    fontSize: isMobile ? 11 : 12,
+    fontFamily: "'JetBrains Mono', monospace",
+    cursor: "pointer",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 6,
+    marginTop: isMobile ? 12 : 16,
+    transition: "all 0.2s ease",
+  });
 
   return (
     <section id="experience" style={sectionStyle}>
@@ -652,10 +682,260 @@ function ExperienceSection() {
                 </div>
               </div>
               <p style={descStyle}>{exp.desc}</p>
+
+              {/* Certificate button (optional) */}
+              {exp.certificate && (
+                <button
+                  onClick={() => handleViewCertificate(exp.certificate, exp.certificateAlt)}
+                  style={certificateButtonStyle(exp.color)}
+                  aria-label={`View ${exp.certificateAlt}`}
+                >
+                  <span style={{ fontSize: isMobile ? 14 : 16 }}>📜</span>
+                  View Certificate
+                </button>
+              )}
             </GlassCard>
           </div>
         ))}
       </div>
+
+      {/* Certificate Modal */}
+      {viewingCertificate && (
+        <div style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 2000,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "rgba(0,5,16,0.97)",
+          backdropFilter: "blur(30px)",
+          animation: "fadeIn 0.3s ease",
+        }}>
+          <div style={{
+            position: "relative",
+            width: isMobile ? "95vw" : "85vw",
+            height: isMobile ? "85vh" : "90vh",
+            maxWidth: 1200,
+            maxHeight: 900,
+            background: "rgba(10,15,30,0.9)",
+            borderRadius: 24,
+            border: "1px solid rgba(0,245,212,0.3)",
+            overflow: "hidden",
+            boxShadow: "0 40px 100px rgba(0,245,212,0.15), 0 0 60px rgba(0,0,0,0.9)",
+            display: "flex",
+            flexDirection: "column",
+          }}>
+            {/* Modal Header */}
+            <div style={{
+              padding: isMobile ? "16px 20px" : "20px 30px",
+              background: "rgba(0,0,0,0.5)",
+              borderBottom: "1px solid rgba(0,245,212,0.2)",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}>
+              <div style={{
+                color: "#00f5d4",
+                fontFamily: "'JetBrains Mono', monospace",
+                fontSize: isMobile ? 13 : 15,
+                letterSpacing: 1,
+                fontWeight: 700,
+              }}>
+                📜 {viewingCertificate.alt}
+              </div>
+
+              <div style={{ display: "flex", gap: 12 }}>
+                {/* Download button */}
+                <a
+                  href={viewingCertificate.url.replace('/preview', '/view')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "rgba(0,245,212,0.15)",
+                    border: "1px solid rgba(0,245,212,0.3)",
+                    borderRadius: 8,
+                    padding: isMobile ? "6px 12px" : "8px 16px",
+                    color: "#00f5d4",
+                    fontSize: isMobile ? 11 : 12,
+                    fontFamily: "'JetBrains Mono', monospace",
+                    textDecoration: "none",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    transition: "all 0.2s ease",
+                  }}
+                  aria-label="Download certificate"
+                >
+                  <span style={{ fontSize: isMobile ? 14 : 16 }}>⬇️</span>
+                  {isMobile ? "Save" : "Download"}
+                </a>
+
+                {/* Close button */}
+                <button
+                  onClick={handleCloseCertificate}
+                  style={{
+                    background: "rgba(255,50,50,0.15)",
+                    border: "1px solid rgba(255,50,50,0.3)",
+                    borderRadius: 8,
+                    padding: isMobile ? "6px 12px" : "8px 16px",
+                    color: "#ff6b6b",
+                    fontSize: isMobile ? 11 : 12,
+                    fontFamily: "'JetBrains Mono', monospace",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    transition: "all 0.2s ease",
+                  }}
+                  aria-label="Close certificate view"
+                >
+                  <span style={{ fontSize: isMobile ? 14 : 16 }}>✕</span>
+                  {isMobile ? "Close" : "Close"}
+                </button>
+              </div>
+            </div>
+
+            {/* Certificate Container */}
+            <div style={{
+              flex: 1,
+              padding: isMobile ? "15px" : "25px",
+              overflow: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "rgba(0,0,0,0.3)",
+            }}>
+              {/* Certificate display - handle Google Drive links */}
+              {viewingCertificate.url.includes('drive.google.com') ? (
+                // Google Drive iframe with optimized view
+                <div style={{
+                  width: "100%",
+                  height: "100%",
+                  position: "relative",
+                  background: "#fff",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+                }}>
+                  <iframe
+                    src={`${viewingCertificate.url.replace('/view', '/preview')}?rm=minimal`}
+                    title={viewingCertificate.alt}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      border: "none",
+                      display: "block",
+                    }}
+                    allow="autoplay"
+                    loading="lazy"
+                  />
+                  {/* Overlay controls */}
+                  <div style={{
+                    position: "absolute",
+                    bottom: 20,
+                    left: 0,
+                    right: 0,
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: 10,
+                  }}>
+                    <button
+                      onClick={() => {
+                        const iframe = document.querySelector('iframe');
+                        if (iframe) {
+                          iframe.contentWindow.postMessage('{"method":"zoomIn"}', '*');
+                        }
+                      }}
+                      style={{
+                        background: "rgba(0,0,0,0.7)",
+                        border: "1px solid rgba(255,255,255,0.2)",
+                        borderRadius: 6,
+                        padding: "6px 12px",
+                        color: "#fff",
+                        fontSize: 12,
+                        fontFamily: "'JetBrains Mono', monospace",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 4,
+                      }}
+                      aria-label="Zoom in"
+                    >
+                      <span>🔍</span> Zoom In
+                    </button>
+                    <button
+                      onClick={() => {
+                        const iframe = document.querySelector('iframe');
+                        if (iframe) {
+                          iframe.contentWindow.postMessage('{"method":"zoomOut"}', '*');
+                        }
+                      }}
+                      style={{
+                        background: "rgba(0,0,0,0.7)",
+                        border: "1px solid rgba(255,255,255,0.2)",
+                        borderRadius: 6,
+                        padding: "6px 12px",
+                        color: "#fff",
+                        fontSize: 12,
+                        fontFamily: "'JetBrains Mono', monospace",
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 4,
+                      }}
+                      aria-label="Zoom out"
+                    >
+                      <span>🔍</span> Zoom Out
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                // Regular image for other URLs
+                <div style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}>
+                  <img
+                    src={viewingCertificate.url}
+                    alt={viewingCertificate.alt}
+                    style={{
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      objectFit: "contain",
+                      borderRadius: 8,
+                      boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+                    }}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = `https://via.placeholder.com/1000x800/0d0221/00f5d4?text=${encodeURIComponent('Certificate Preview')}`;
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Footer Instructions */}
+            <div style={{
+              padding: isMobile ? "10px 16px" : "12px 24px",
+              background: "rgba(0,0,0,0.6)",
+              borderTop: "1px solid rgba(255,255,255,0.1)",
+              textAlign: "center",
+              fontSize: isMobile ? 10 : 11,
+              color: "rgba(255,255,255,0.5)",
+              fontFamily: "'JetBrains Mono', monospace",
+            }}>
+              {isMobile ? "Pinch to zoom • Swipe to navigate" : "Use mouse wheel to zoom • Click and drag to pan • Use buttons for zoom controls"}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -703,12 +983,12 @@ function ProjectsSection() {
     fontSize: isMobile ? 24 : 32,
     marginBottom: isMobile ? 12 : 16,
     color: color,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
   });
 
   const titleStyle = {
     margin: "0 0 8px",
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: isMobile ? 18 : 20,
     fontWeight: 700,
     color: "#fff"
@@ -719,7 +999,7 @@ function ProjectsSection() {
     color: "rgba(255,255,255,0.5)",
     fontSize: isMobile ? 13 : 14,
     lineHeight: 1.65,
-    fontFamily: "'DM Sans', sans-serif"
+    fontFamily: "'Poppins', sans-serif"
   };
 
   const tagsContainerStyle = {
@@ -736,7 +1016,7 @@ function ProjectsSection() {
     borderRadius: 6,
     padding: isMobile ? "2px 8px" : "3px 10px",
     fontSize: isMobile ? 10 : 11,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
   });
 
   const linkStyle = (color) => ({
@@ -745,7 +1025,7 @@ function ProjectsSection() {
     gap: 6,
     color: color,
     fontSize: isMobile ? 12 : 13,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     textDecoration: "none",
     letterSpacing: 1,
   });
@@ -804,7 +1084,7 @@ function SkillsSection() {
   };
 
   const categoryStyle = {
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     fontSize: isMobile ? 10 : 11,
     letterSpacing: 2,
     color: "#00f5d4",
@@ -825,13 +1105,13 @@ function SkillsSection() {
   const skillNameStyle = {
     color: "rgba(255,255,255,0.8)",
     fontSize: isMobile ? 13 : 14,
-    fontFamily: "'DM Sans', sans-serif"
+    fontFamily: "'Poppins', sans-serif"
   };
 
   const skillLevelStyle = {
     color: "rgba(255,255,255,0.35)",
     fontSize: isMobile ? 11 : 12,
-    fontFamily: "'Space Mono', monospace"
+    fontFamily: "'JetBrains Mono', monospace"
   };
 
   const progressBarStyle = {
@@ -976,7 +1256,7 @@ function TestimonialsSection() {
       <section id="testimonials" style={{ padding: isMobile ? "60px 20px" : "80px 40px", maxWidth: 900, margin: "0 auto" }}>
         <SectionHeader label="FEEDBACK" title="Testimonials" />
         <GlassCard hover={false} style={{ padding: isMobile ? "32px" : "48px", textAlign: "center" }}>
-          <div style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'DM Sans', sans-serif" }}>
+          <div style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Poppins', sans-serif" }}>
             Loading testimonials...
           </div>
         </GlassCard>
@@ -990,7 +1270,7 @@ function TestimonialsSection() {
       <section id="testimonials" style={{ padding: isMobile ? "60px 20px" : "80px 40px", maxWidth: 900, margin: "0 auto" }}>
         <SectionHeader label="FEEDBACK" title="Testimonials" />
         <GlassCard hover={false} style={{ padding: isMobile ? "32px" : "48px", textAlign: "center" }}>
-          <div style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'DM Sans', sans-serif", marginBottom: 24 }}>
+          <div style={{ color: "rgba(255,255,255,0.5)", fontFamily: "'Poppins', sans-serif", marginBottom: 24 }}>
             No testimonials yet. Be the first to share your feedback!
           </div>
           <button
@@ -999,7 +1279,7 @@ function TestimonialsSection() {
               background: "linear-gradient(135deg, #00f5d4, #4cc9f0)",
               border: "none", borderRadius: 12, padding: isMobile ? "10px 20px" : "12px 24px",
               color: "#040b14", fontWeight: 800, fontSize: isMobile ? 13 : 14,
-              cursor: "pointer", fontFamily: "'Space Mono', monospace",
+              cursor: "pointer", fontFamily: "'JetBrains Mono', monospace",
               letterSpacing: 1, transition: "all 0.2s ease",
               boxShadow: "0 0 20px rgba(0,245,212,0.25)",
             }}
@@ -1026,7 +1306,7 @@ function TestimonialsSection() {
           padding: isMobile ? "12px 16px" : "16px 24px",
           marginBottom: 24,
           color: "#00f5d4",
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           textAlign: "center",
           fontSize: isMobile ? 14 : 16,
         }}>
@@ -1062,7 +1342,7 @@ function TestimonialsSection() {
           alignItems: "center",
           justifyContent: "center",
           margin: "0 auto 20px",
-          fontFamily: "'Syne', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: isMobile ? 16 : 18,
           fontWeight: 800,
           color: "#040b14",
@@ -1076,7 +1356,7 @@ function TestimonialsSection() {
           color: "rgba(255,255,255,0.75)",
           fontSize: isMobile ? 16 : 18,
           lineHeight: 1.7,
-          fontFamily: "'DM Sans', sans-serif",
+          fontFamily: "'Poppins', sans-serif",
           maxWidth: 560,
           margin: "0 auto 24px",
           fontStyle: "italic",
@@ -1088,7 +1368,7 @@ function TestimonialsSection() {
 
         {/* Name and Role */}
         <div style={{
-          fontFamily: "'Syne', sans-serif",
+          fontFamily: "'Inter', sans-serif",
           fontSize: isMobile ? 16 : 17,
           fontWeight: 700,
           color: "#fff"
@@ -1098,7 +1378,7 @@ function TestimonialsSection() {
         <div style={{
           color: currentTestimonial.color || '#00f5d4',
           fontSize: isMobile ? 12 : 13,
-          fontFamily: "'Space Mono', monospace",
+          fontFamily: "'JetBrains Mono', monospace",
           marginTop: 4
         }}>
           {currentTestimonial.role}
@@ -1137,7 +1417,7 @@ function TestimonialsSection() {
               fontWeight: 800,
               fontSize: isMobile ? 13 : 14,
               cursor: "pointer",
-              fontFamily: "'Space Mono', monospace",
+              fontFamily: "'JetBrains Mono', monospace",
               letterSpacing: 1,
               transition: "all 0.2s ease",
               boxShadow: showForm ? "none" : "0 0 20px rgba(114,9,183,0.25)",
@@ -1153,7 +1433,7 @@ function TestimonialsSection() {
         <GlassCard hover={false} style={{ padding: isMobile ? "32px 24px" : "48px", marginTop: 32 }}>
           <div style={{ marginBottom: isMobile ? 24 : 32, textAlign: "center" }}>
             <div style={{
-              fontFamily: "'Space Mono', monospace",
+              fontFamily: "'JetBrains Mono', monospace",
               fontSize: isMobile ? 10 : 11,
               letterSpacing: 4,
               color: "#00f5d4",
@@ -1164,7 +1444,7 @@ function TestimonialsSection() {
             </div>
             <h3 style={{
               margin: 0,
-              fontFamily: "'Syne', sans-serif",
+              fontFamily: "'Inter', sans-serif",
               fontSize: "clamp(20px, 4vw, 32px)",
               fontWeight: 800,
               color: "#fff",
@@ -1191,7 +1471,7 @@ function TestimonialsSection() {
                   borderRadius: 12,
                   color: "#fff",
                   fontSize: isMobile ? 14 : 15,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "all 0.2s ease",
@@ -1213,7 +1493,7 @@ function TestimonialsSection() {
                   borderRadius: 12,
                   color: "#fff",
                   fontSize: isMobile ? 14 : 15,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "all 0.2s ease",
@@ -1236,7 +1516,7 @@ function TestimonialsSection() {
                   borderRadius: 12,
                   color: "#fff",
                   fontSize: isMobile ? 14 : 15,
-                  fontFamily: "'DM Sans', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   outline: "none",
                   boxSizing: "border-box",
                   transition: "all 0.2s ease",
@@ -1258,7 +1538,7 @@ function TestimonialsSection() {
                   fontWeight: 800,
                   fontSize: isMobile ? 14 : 15,
                   cursor: submitting ? "not-allowed" : "pointer",
-                  fontFamily: "'Space Mono', monospace",
+                  fontFamily: "'JetBrains Mono', monospace",
                   letterSpacing: 1,
                   transition: "all 0.2s ease",
                   boxShadow: "0 0 30px rgba(0,245,212,0.25)",
@@ -1274,7 +1554,7 @@ function TestimonialsSection() {
             marginTop: isMobile ? 20 : 24,
             color: "rgba(255,255,255,0.4)",
             fontSize: isMobile ? 11 : 12,
-            fontFamily: "'DM Sans', sans-serif",
+            fontFamily: "'Poppins', sans-serif",
             textAlign: "center",
           }}>
             Your testimonial will be visible to others after submission.
@@ -1314,7 +1594,7 @@ function ContactSection() {
     borderRadius: 12,
     color: "#fff",
     fontSize: isMobile ? 14 : 15,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
     outline: "none",
     boxSizing: "border-box",
     transition: "all 0.2s ease",
@@ -1338,7 +1618,7 @@ function ContactSection() {
 
   const successTitleStyle = {
     color: "#00f5d4",
-    fontFamily: "'Syne', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: isMobile ? 20 : 22,
     fontWeight: 700
   };
@@ -1346,7 +1626,7 @@ function ContactSection() {
   const successMessageStyle = {
     color: "rgba(255,255,255,0.4)",
     marginTop: 8,
-    fontFamily: "'DM Sans', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
     fontSize: isMobile ? 14 : 16
   };
 
@@ -1365,7 +1645,7 @@ function ContactSection() {
     fontWeight: 800,
     fontSize: isMobile ? 14 : 15,
     cursor: "pointer",
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     letterSpacing: 1,
     transition: "all 0.2s ease",
     boxShadow: "0 0 30px rgba(0,245,212,0.25)",
@@ -1387,7 +1667,7 @@ function ContactSection() {
     color: color,
     textDecoration: "none",
     fontSize: isMobile ? 12 : 13,
-    fontFamily: "'Space Mono', monospace",
+    fontFamily: "'JetBrains Mono', monospace",
     transition: "all 0.2s ease",
     backdropFilter: "blur(10px)",
   });
@@ -1460,13 +1740,13 @@ function SectionHeader({ label, title }) {
   return (
     <div style={{ marginBottom: 48, textAlign: "center" }}>
       <div style={{
-        fontFamily: "'Space Mono', monospace", fontSize: 11, letterSpacing: 4,
+        fontFamily: "'JetBrains Mono', monospace", fontSize: 11, letterSpacing: 4,
         color: "#00f5d4", marginBottom: 12, opacity: 0.7,
       }}>
         {label}
       </div>
       <h2 style={{
-        margin: 0, fontFamily: "'Syne', sans-serif",
+        margin: 0, fontFamily: "'Inter', sans-serif",
         fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800,
         color: "#fff", letterSpacing: -1,
       }}>
@@ -1508,7 +1788,7 @@ export default function Portfolio() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body { background: #000510; color: #fff; }
@@ -1558,7 +1838,7 @@ export default function Portfolio() {
           borderTop: "1px solid rgba(255,255,255,0.05)",
           color: "rgba(255,255,255,0.2)",
           fontSize: "clamp(10px, 2vw, 12px)",
-          fontFamily: "'Space Mono', monospace",
+          fontFamily: "'JetBrains Mono', monospace",
         }}>
           Crafted with ♥ by Reckie Degollacion · {new Date().getFullYear()}
         </div>
