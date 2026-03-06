@@ -41,10 +41,20 @@ const SKILLS = [
   { name: "React / Next.js", level: 95, cat: "Frontend" },
   { name: "TypeScript", level: 90, cat: "Frontend" },
   { name: "CSS / Tailwind", level: 88, cat: "Frontend" },
+  { name: "Vue.js", level: 75, cat: "Frontend" },
   { name: "Node.js / Express", level: 85, cat: "Backend" },
   { name: "PHP", level: 85, cat: "Backend" },
-  { name: "MySQL", level: 80, cat: "Backend" },
+  { name: "Python / Django", level: 78, cat: "Backend" },
+  { name: "MySQL / PostgreSQL", level: 80, cat: "Backend" },
+  { name: "MongoDB", level: 70, cat: "Backend" },
+  { name: "REST API Design", level: 88, cat: "Backend" },
+  { name: "GraphQL", level: 75, cat: "Backend" },
   { name: "AWS", level: 72, cat: "DevOps" },
+  { name: "Docker", level: 68, cat: "DevOps" },
+  { name: "CI/CD Pipelines", level: 75, cat: "DevOps" },
+  { name: "Git / GitHub", level: 90, cat: "Tools" },
+  { name: "Jest / Testing", level: 82, cat: "Tools" },
+  { name: "Figma / UI Design", level: 65, cat: "Tools" },
 ];
 
 const EXPERIENCES = [
@@ -508,8 +518,75 @@ function HeroSection() {
       </h1>
 
       <p style={descriptionStyle}>
-        I build fast, scalable, and beautiful web applications. Passionate about clean architecture, great UX, and shipping products that matter.
+        Full-stack developer with 3+ years of experience building fast, scalable, and beautiful web applications. Passionate about clean architecture, great UX, and shipping products that matter. Based in the Philippines, I specialize in React, Node.js, and modern web technologies. When I'm not coding, I enjoy contributing to open-source projects, learning new technologies, and mentoring aspiring developers.
       </p>
+
+      {/* Personal Details */}
+      <div style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: isMobile ? 12 : 16,
+        justifyContent: "center",
+        marginTop: isMobile ? 20 : 24,
+        animation: "fadeUp 0.8s ease 0.2s both",
+      }}>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          background: "rgba(255,255,255,0.03)",
+          border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 8,
+          padding: "8px 16px",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: isMobile ? 10 : 11,
+          color: "rgba(255,255,255,0.7)",
+        }}>
+          <span style={{ color: "#00f5d4" }}>📍</span> Philippines
+        </div>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          background: "rgba(255,255,255,0.03)",
+          border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 8,
+          padding: "8px 16px",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: isMobile ? 10 : 11,
+          color: "rgba(255,255,255,0.7)",
+        }}>
+          <span style={{ color: "#00f5d4" }}>🎓</span> Computer Science
+        </div>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          background: "rgba(255,255,255,0.03)",
+          border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 8,
+          padding: "8px 16px",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: isMobile ? 10 : 11,
+          color: "rgba(255,255,255,0.7)",
+        }}>
+          <span style={{ color: "#00f5d4" }}>💼</span> 3+ Years Experience
+        </div>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 8,
+          background: "rgba(255,255,255,0.03)",
+          border: "1px solid rgba(255,255,255,0.05)",
+          borderRadius: 8,
+          padding: "8px 16px",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: isMobile ? 10 : 11,
+          color: "rgba(255,255,255,0.7)",
+        }}>
+          <span style={{ color: "#00f5d4" }}>🚀</span> Open Source Contributor
+        </div>
+      </div>
 
       <div style={buttonContainerStyle}>
         <button
